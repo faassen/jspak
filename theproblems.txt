@@ -1,0 +1,61 @@
+* Have to put 'test' directory under 'src' otherwise it won't work somehow.
+
+* have to explicitly list components/jquery/*.js in sources in buster.js;
+  components/**/*.js gets too much. This is going to be cumbersome if
+  we have a number of dependencies.
+
+* still need to figure out how to install all dependencies (npm and
+  bower) automatically somehow...
+
+See also:
+
+
+https://github.com/eskimoblood/grunt_example/blob/master/package.json
+
+and:
+
+https://github.com/jodal/buster-coffee/tree/master/demo-amd
+
+and:
+
+https://github.com/reebalazs/SlickGrid-bootstrap/blob/master/Gruntfile.js
+
+The goals:
+
+src directory with obviel modules in it:
+
+src/core.js
+src/template.js
+
+Produce one "everything" js file out of this, or alternatively 
+use smaller files directly? or multiple productions?
+
+Refer to these in requirejs using:
+
+"obviel/core"
+
+
+test directory with test modules in it:
+
+src/test-core.js
+src/test-template.js
+
+components directory with bower components in it
+
+don't include external components in produced obviel.js
+
+when a bower component is installed, automatically make it available
+to requirejs
+
+buster.js should have multiple test groups so tests can be run separately
+
+buster.js should use phantomjs by default so tests can be run right away,
+but allow debugging using firebug.
+
+should not have to list requirejs dependencies in buster.js
+
+
+
+dependency list for components (components.json?)  dependency list for
+package.json - does this only have dev deps?
+

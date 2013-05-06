@@ -1,0 +1,11 @@
+{
+  "name": "jspack",
+  "version": "0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-requirejs": "~0.3.5",
+    "grunt-bower-requirejs": "~0.4.2"
+  }
+}
