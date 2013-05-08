@@ -1,21 +1,25 @@
 var config = module.exports;
 
-var collect = require('grunt-collection-helper');
+var fs = require('fs');
+
+var sources = JSON.parse(fs.readFileSync('bowerbuster.json', 'utf8'));
+sources.push('src/**/*.js');
 
 config["core"] = {
-    autoRun: false,
     rootPath: ".",
     environment: "browser",
     libs: [
         'components/requirejs/require.js',
         'rjs.js'
     ],
-    sources: [
-        "components/jquery/*.js",
-        "src/**/*.js"
-    ],
+    sources: sources,
     tests: [
-        "test/test-core.js"
+        "test/**/*.js"
     ],
-    extensions: [require('buster-amd')]
+    extensions: [require('buster-amd')],
+    "buster-amd": {
+        pathMapper: function(path) {
+            return path.replace(/\.js$/, "").replace(/^\//, "../");
+        }
+    }
 };

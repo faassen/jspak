@@ -17,6 +17,9 @@ module.exports = function(grunt) {
             }
         }
     },
+    bowerbuster: {
+        path: 'bowerbuster.json'
+    },
     buster: {
         test: {
             config: 'buster.js'
@@ -29,8 +32,9 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-requirejs');
   grunt.loadNpmTasks('grunt-bower-requirejs');
+  grunt.loadNpmTasks('grunt-bower-busterjs');
   grunt.loadNpmTasks('grunt-buster');
 
   grunt.registerTask('default', ['bower', 'requirejs']);
-  grunt.registerTask('test', ['buster']);
+  grunt.registerTask('test', ['bowerbuster', 'buster']);
 };
