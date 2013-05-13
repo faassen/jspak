@@ -14,7 +14,7 @@ Install client-side dependencies:
 
     $ bower install
 
-Run the tests:
+Run the tests with buster (and PhantomJS):
 
     $ grunt test
 
