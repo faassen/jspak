@@ -36,5 +36,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-buster');
 
   grunt.registerTask('default', ['bower', 'requirejs']);
-  grunt.registerTask('test', ['bowerbuster', 'buster']);
+  grunt.registerTask('test', ['bower', 'bowerbuster', 'buster']);
 };
