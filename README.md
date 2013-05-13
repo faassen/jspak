@@ -20,3 +20,4 @@ Run the tests with buster (and PhantomJS):
 
 For more about the background, see this blog post:
 
+http://blog.startifact.com/posts/overwhelmed-by-javascript-dependencies.html
