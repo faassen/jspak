@@ -1,6 +1,6 @@
 require.config({
-    "baseUrl": "src",
-    "paths": {
-        "jquery": "../components/jquery/jquery"
+    baseUrl: "src",
+    paths: {
+        jquery: "../components/jquery/jquery"
     }
 });
