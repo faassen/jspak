@@ -3,6 +3,10 @@
 A sample project where we hook up Bower to RequireJS and Bower to
 Buster.JS, using Grunt.
 
+For more about the background, see this blog post:
+
+http://blog.startifact.com/posts/overwhelmed-by-javascript-dependencies.html
+
 ## On your machine
 
 You need to have nodejs, npm, bower, grunt, buster and PhantomJS
@@ -31,10 +35,6 @@ Once it finishes installing everything:
     $ vagrant ssh
     $ cd /vagrant
     $ grunt test
-
-For more about the background, see this blog post:
-
-http://blog.startifact.com/posts/overwhelmed-by-javascript-dependencies.html
 
 ## Okay, now what?
 
